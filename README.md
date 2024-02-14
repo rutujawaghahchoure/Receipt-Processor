@@ -46,20 +46,20 @@ Follow these instructions to set up the project environment and run the applicat
    java -jar target/receipt-service-1.0.0.jar
    ```
 
-5. Access the Application:
+5. Access the Application:<br>
    Once the application is running, you can access it at http://localhost:8080.
 
 #### Usage
-1. Processing Receipts
-    Endpoint: POST /receipts/process
-   Payload: JSON representation of a receipt
+1. Processing Receipts<br>
+    Endpoint: POST /receipts/process<br>
+   Payload: JSON representation of a receipt<br>
    Example:
    ```
    curl -X POST -H "Content-Type: application/json" -d '{"retailer":"Target","purchaseDate":"2022-01-01","purchaseTime":"13:01","total":35.35,"items":[{"shortDescription":"Mountain Dew 12PK","price":"6.49"},{"shortDescription":"Emils Cheese Pizza","price":"12.25"},{"shortDescription":"Knorr Creamy Chicken","price":"1.26"},{"shortDescription":"Doritos Nacho Cheese","price":"3.35"},{"shortDescription":"Klarbrunn 12-PK 12 FL OZ","price":"12.00"}]}' http://localhost:8080/receipts/process
    ```
 
-2. Retrieving Points
-   Endpoint: GET /receipts/{id}/points
+2. Retrieving Points<br>
+   Endpoint: GET /receipts/{id}/points<br>
    Example:
    ```
    curl -X GET http://localhost:8080/receipts/{id}/points
