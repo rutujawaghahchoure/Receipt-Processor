@@ -22,9 +22,13 @@ The application is designed to be modular, maintainable, and scalable, following
 Follow these instructions to set up the project environment and run the application on any operating system.
 
 ### Prerequisites
-1. Java Development Kit (JDK) installed (version 8 or later)
-2. Apache Maven installed (for building the project)
-3. Git installed (for cloning the project repository)
+1. Java Development Kit (JDK) installed (version 8 or later)<br>
+   You can check the installation steps here: https://docs.oracle.com/en/java/javase/21/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
+2. Apache Maven installed (for building the project)<br>
+   Download maven from here: https://maven.apache.org/download.cgi <br>
+   You can check the installation steps here: https://maven.apache.org/install.html <br>
+   After installing maven and adding the PATH variable system should be restarted. <br>
+5. Git installed (for cloning the project repository) <br>
 
 
 #### Steps
@@ -60,6 +64,7 @@ Follow these instructions to set up the project environment and run the applicat
 
 2. Retrieving Points<br>
    Endpoint: GET /receipts/{id}/points<br>
+   Here, id is the id you get after executing the above command.
    Example:
    ```
    curl -X GET http://localhost:8080/receipts/{id}/points
