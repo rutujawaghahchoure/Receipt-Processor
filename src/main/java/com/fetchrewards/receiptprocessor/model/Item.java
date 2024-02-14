@@ -16,6 +16,20 @@ public class Item {
     private String shortDescription;
     private String price;
 
+    public  Item(){
+        
+    }
+    public Item(UUID id, String shortDescription, String price) {
+        this.id = id;
+        this.shortDescription = shortDescription;
+        this.price = price;
+    }
+
+    public Item(String shortDescription, String price) {
+        this.shortDescription = shortDescription;
+        this.price = price;
+    }
+
     public UUID getId() {
         return id;
     }

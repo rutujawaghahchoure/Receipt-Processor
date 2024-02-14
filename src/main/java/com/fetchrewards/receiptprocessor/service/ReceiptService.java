@@ -12,12 +12,17 @@ import java.util.List;
 public class ReceiptService {
     @Autowired
     private ReceiptRepository receiptRepository;
+
     public Receipt saveReceipt(Receipt receipt){
         Receipt savedReceipt = receiptRepository.save(receipt);
         return savedReceipt;
     }
 
-    public int calculatePoints(Receipt receipt) {
+    public String calculatePoints(Receipt receipt) {
+
+        if (receipt.getItems().isEmpty()) {
+            return "Receipt does not contain any items!";
+        }
 
         // One point for each alphanumeric character in the retailer name
         int points = receipt.getRetailer().replaceAll("[^a-zA-Z0-9]", "").length();
@@ -66,6 +71,6 @@ public class ReceiptService {
         if (purchaseHour >= 14 && purchaseHour <= 16)
             points += 10;
 
-        return points;
+        return String.valueOf(points);
     }
 }

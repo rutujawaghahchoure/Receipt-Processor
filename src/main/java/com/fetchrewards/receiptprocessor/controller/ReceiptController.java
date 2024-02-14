@@ -36,7 +36,7 @@ public class ReceiptController {
         Optional<Receipt> optionalReceipt = receiptRepository.findById(id);
         if (optionalReceipt.isPresent()) {
             Receipt receipt = optionalReceipt.get();
-            int points = receiptService.calculatePoints(receipt);
+            String points = receiptService.calculatePoints(receipt);
             return ResponseEntity.ok("{ \"points\": " + points + " }");
         } else {
             return ResponseEntity.notFound().build();
