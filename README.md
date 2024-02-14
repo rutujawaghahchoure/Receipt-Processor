@@ -34,7 +34,7 @@ Follow these instructions to set up the project environment and run the applicat
 #### Steps
 1. Clone the Repository
    ```
-   git clone https://github.com/rutujawaghahchoure/FetchApplication.git
+   git clone https://github.com/rutujawaghahchoure/Receipt-Processor.git
    ```
 2. Navigate to the Project Directory:
    ```
@@ -47,10 +47,13 @@ Follow these instructions to set up the project environment and run the applicat
 
 4. Run the Application
    ```
-   java -jar target/receipt-service-1.0.0.jar
+   cd out
+   cd artifacts
+   cd receipt_processor_jar
+   java -jar receipt-processor.jar
    ```
 
-5. Access the Application:<br>
+6. Access the Application:<br>
    Once the application is running, you can access it at http://localhost:8080.
 
 #### Usage
