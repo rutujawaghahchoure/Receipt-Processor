@@ -47,9 +47,13 @@ Follow these instructions to set up the project environment and run the applicat
 
 4. Run the Application
    ```
-   java -jar target/receipt-processor.jar
+   java -jar target/receipt-processor-0.0.1-SNAPSHOT.jar
    ```
-   Note: Please check the jar file name created in the target folder on your system and replace it with the 'receipt-processor.jar'
+   If the port 8080 is in use, you can use the below command and speficy other port number.
+   ```
+   java -jar receipt-processor-0.0.1-SNAPSHOT.jar --server.port=8081
+   ```
+   Note: Please check the jar file name created in the target folder on your system and replace it with the 'receipt-processor-0.0.1-SNAPSHOT.jar'
 
 6. Access the Application:<br>
    Once the application is running, you can access it at http://localhost:8080.
