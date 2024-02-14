@@ -42,15 +42,12 @@ Follow these instructions to set up the project environment and run the applicat
    ```
 3. Build the Project
    ```
-   mvn clean install
+   mvn clean package
    ```
 
 4. Run the Application
    ```
-   cd out
-   cd artifacts
-   cd receipt_processor_jar
-   java -jar receipt-processor.jar
+   java -jar target/receipt-processor.jar
    ```
 
 6. Access the Application:<br>
