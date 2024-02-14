@@ -49,6 +49,7 @@ Follow these instructions to set up the project environment and run the applicat
    ```
    java -jar target/receipt-processor.jar
    ```
+   Note: Please check the jar file name created in the target folder on your system and replace it with the 'receipt-processor.jar'
 
 6. Access the Application:<br>
    Once the application is running, you can access it at http://localhost:8080.
