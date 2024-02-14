@@ -54,18 +54,48 @@ Follow these instructions to set up the project environment and run the applicat
    Once the application is running, you can access it at http://localhost:8080.
 
 #### Usage
+Now, the api end points can be tested using Postman tool. <br>
+Download it here: https://www.postman.com/downloads/
 1. Processing Receipts<br>
     Endpoint: POST /receipts/process<br>
    Payload: JSON representation of a receipt<br>
-   Example:
+   Example:<br>
+   Send the POST request using the Postman Tool alogn with request body:
+   http://localhost:8080/receipts/process<br>
+   Select the Body option and under it select raw and JSON from the drop down.<br>
+   Then pass the below JSON object:<br>
+   ```json
+      {
+     "retailer": "Target",
+     "purchaseDate": "2022-01-01",
+     "purchaseTime": "13:01",
+     "items": [
+      {
+         "shortDescription": "Mountain Dew 12PK",
+         "price": "6.49"
+       },{
+         "shortDescription": "Emils Cheese Pizza",
+         "price": "12.25"
+       },{
+         "shortDescription": "Knorr Creamy Chicken",
+         "price": "1.26"
+       },{
+         "shortDescription": "Doritos Nacho Cheese",
+         "price": "3.35"
+       },{
+         "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+         "price": "12.00"
+       }
+     ],
+     "total": "35.35"
+   }
    ```
-   curl -X POST -H "Content-Type: application/json" -d '{"retailer":"Target","purchaseDate":"2022-01-01","purchaseTime":"13:01","total":35.35,"items":[{"shortDescription":"Mountain Dew 12PK","price":"6.49"},{"shortDescription":"Emils Cheese Pizza","price":"12.25"},{"shortDescription":"Knorr Creamy Chicken","price":"1.26"},{"shortDescription":"Doritos Nacho Cheese","price":"3.35"},{"shortDescription":"Klarbrunn 12-PK 12 FL OZ","price":"12.00"}]}' http://localhost:8080/receipts/process
-   ```
+   
 
-2. Retrieving Points<br>
+3. Retrieving Points<br>
    Endpoint: GET /receipts/{id}/points<br>
-   Here, id is the id you get after executing the above command.
-   Example:
-   ```
-   curl -X GET http://localhost:8080/receipts/{id}/points
-   ```
+   Here, id is the id you get after executing the above command.<br>
+   Example:<br>
+   Now, send a GET request using the Postman Tool:<br>
+   http://localhost:8080/receipts/{id}/points
+   
